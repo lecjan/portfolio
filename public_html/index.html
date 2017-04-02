@@ -9,10 +9,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Lech Jankowski's Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="description" content="Lech Jankowski's Portfolio" />
+	<meta name="keywords" content="Lech Jankowski, porfolio, software, web, design" />
+	<meta name="author" content="Lech Jankowski" />
 
+	<style>
+		/* This only works with JavaScript, 
+		   if it's not present, don't show loader */
+		.no-js #loader { display: none;  }
+		.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+	</style>        
+        
   	<!-- 
 	//////////////////////////////////////////////////////
 
@@ -66,8 +73,27 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+        
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	
+	
+	<script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+	<script>
+		// Wait for window load
+		$(window).load(function() {
+			// Animate loader off screen
+			$("#loader").animate({
+				top: -200
+			}, 1500);
+		});
+	</script>        
+        
 	</head>
 	<body>
+
+        <center>
+            <img src="ajax-loader.gif" id="loader">             
+        </center>
 	
 	<div id="fh5co-page">
 		<nav class="fh5co-nav-style-1" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
@@ -79,7 +105,7 @@
 				<div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
 					<ul data-offcanvass="yes">
 						<li class="active"><a href="index.html">Software Development</a></li>
-						<li><a href="creative_media.html">Creative Media</a></li>
+						<li><a href="https://www.behance.net/yankovskee">Creative Media</a></li>
                                                 <li><a href="index.html#contact">Contact</a></li>
 					</ul>
 				</div> 
