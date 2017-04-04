@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : Lech Jankowski
 */
 
+/* for page loader */
 .loader {
 	position: fixed;
 	left: 0px;
@@ -17,3 +18,5 @@ and open the template in the editor.
 	z-index: 9999;
 	background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
 }
+
+/* for slider */
