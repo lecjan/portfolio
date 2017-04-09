@@ -67,23 +67,63 @@
             <script src="js/respond.min.js"></script>
             <![endif]-->
 
+            <!-- page load -->
+
+            
             <!-- Mu custom style -->
             <link rel="stylesheet" href="css/custom.css">
 
             <!-- page loading script -->
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script type="text/javascript">
-            $(window).load(function() {
-                    $(".loader").fadeOut("slow");
-            })
+            <script>
+                ;(function(){
+                  function id(v){ return document.getElementById(v); }
+                  function loadbar() {
+                    var ovrl = id("overlay"),
+                        prog = id("progress"),
+                        stat = id("progstat"),
+                        img = document.images,
+                        c = 0,
+                        tot = img.length;
+                    if(tot == 0) return doneLoading();
+
+                    function imgLoaded(){
+                      c += 1;
+                      var perc = ((100/tot*c) << 0) +"%";
+                      prog.style.width = perc;
+                      stat.innerHTML = "Loading "+ perc;
+                      if(c===tot) return doneLoading();
+                    }
+                    function doneLoading(){
+                      ovrl.style.opacity = 0;
+                      setTimeout(function(){ 
+                        ovrl.style.display = "none";
+                      }, 9000000);
+                    }
+                    for(var i=0; i<tot; i++) {
+                      var tImg     = new Image();
+                      tImg.onload  = imgLoaded;
+                      tImg.onerror = imgLoaded;
+                      tImg.src     = img[i].src;
+                    }    
+                  }
+                  document.addEventListener('DOMContentLoaded', loadbar, false);
+                }());
             </script>
-        
+       
 	</head>
         
 	<body>
-            <div class="loader"></div>
-	
+
+            <div id="overlay">
+              <div id="progstat"></div>
+              <div id="progress"></div>
+            </div>
+
+                
+            
             <div id="fh5co-page">
+
                     <nav class="fh5co-nav-style-2" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
                             <div class="container">
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
@@ -113,9 +153,9 @@
                                             <div class="row">
                                                     <div class="col-md-push-6 col-md-6 full-height js-full-height">
                                                             <div class="fh5co-cover-intro">
-                                                                    <h1 class="cover-text-lead wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s" style="color: #c1e2b3">IT Creations made with a smile</h1>
-                                                                    <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".8s">I work on my projects with determination, curiosity and with passion for design.</br>Over 10 years experience in software development. Programming in JAVA, JSP, Javascript, PHP, HTML, CSS ...</h2>
-                                                                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s"><a href="http://ie.linkedin.com/in/lechjankowski" class="btn btn-primary btn-outline btn-lg">See My Profile - <i class="icon icon-linkedin"></i></a></p>
+                                                                    <h1 class="cover-text-lead wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" style="color: #c1e2b3">IT Creations made with a smile</h1>
+                                                                    <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".6s">I work on my projects with determination, curiosity and with passion for design.</br>Over 10 years experience in software development. Programming in JAVA, JSP, Javascript, PHP, HTML, CSS ...</h2>
+                                                                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s"><a href="http://ie.linkedin.com/in/lechjankowski" class="btn btn-primary btn-outline btn-lg">See My Profile - <i class="icon icon-linkedin"></i></a></p>
                                                             </div>
                                                     </div>
                                             </div>
@@ -137,7 +177,7 @@
                             </div>
                             <div id="projects" class="fh5co-projects">
                                     <ul>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".6s" data-stellar-background-ratio="0.5">
+                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
                                                     <a href="proj_padole.html">
                                                             <div class="fh5co-overlay"></div>
                                                             <div class="container">
@@ -156,7 +196,7 @@
                                                             </div>
                                                     </a>
                                             </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s" data-wow-delay=".7s" data-stellar-background-ratio="0.5">
+                                            <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
                                                     <a href="proj_landmark.html">
                                                             <div class="fh5co-overlay"></div>
                                                             <div class="container">
@@ -174,7 +214,7 @@
                                                             </div>
                                                     </a>
                                             </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".8s" data-stellar-background-ratio="0.5">
+                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
                                                     <a href="proj_spsoc.html">
                                                             <div class="fh5co-overlay"></div>
                                                             <div class="container">
@@ -192,7 +232,7 @@
                                                             </div>
                                                     </a>
                                             </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s" data-wow-delay="1s" data-stellar-background-ratio="0.5">
+                                            <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
                                                     <a href="proj_daft.html">
                                                             <div class="fh5co-overlay"></div>
                                                             <div class="container">
@@ -210,7 +250,7 @@
                                                             </div>
                                                     </a>
                                             </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay="1.2s" data-stellar-background-ratio="0.5">
+                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
                                                     <a href="proj_rebelvote.html">
                                                             <div class="fh5co-overlay"></div>
                                                             <div class="container">
@@ -313,14 +353,14 @@
                             <div class="container">
                                     <div class="row p-b">
                                             <div class="col-md-6 col-md-offset-3 text-center">
-                                                <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".1s" style="color: #ffffff">Testimonials</h2>
+                                                <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s" style="color: #ffffff">Testimonials</h2>
                                                     <p class="wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s"></p>
                                             </div>
                                     </div>
                                     <div class="row">
 
                                         <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s">
+                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
                                                 <div class="fh5co-name">
                                                     <img src="people/davidmcquaid.jpg" alt=""></br>
                                                     <div class="fh5co-meta">
@@ -334,7 +374,7 @@
                                             </div>	
                                         </div>
                                         <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".3s">
+                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".5s">
                                                 <div class="fh5co-name">
                                                     <img src="people/amandakirk.jpg" alt=""></br>
                                                     <div class="fh5co-meta">
@@ -351,7 +391,7 @@
                                         <div class="clearfix visible-sm-block"></div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
+                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
                                                 <div class="fh5co-name">
                                                     <img src="people/malachyo'leary.jpg" alt=""></br>
                                                         <div class="fh5co-meta">
@@ -368,7 +408,7 @@
                                         <div class="clearfix visible-lg-block visible-md-block"></div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".5s">
+                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".7s">
                                                 <div class="fh5co-name">
                                                     <img src="people/leszekguzowski.jpg" alt=""></br>
                                                         <div class="fh5co-meta">
@@ -385,7 +425,7 @@
                                         <div class="clearfix visible-sm-block"></div>
 
                                         <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
+                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".8s">
                                                 <div class="fh5co-name">
                                                     <img src="people/jerzyrydzewski.jpg" alt=""></br>
                                                     <div class="fh5co-meta">
@@ -402,7 +442,7 @@
                                         <div class="clearfix visible-sm-block"></div>
                                         
                                         <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
+                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".9s">
                                                 <div class="fh5co-name">
                                                     <img src="people/gavinbyrne.jpg" alt=""></br>
                                                     <div class="fh5co-meta">
