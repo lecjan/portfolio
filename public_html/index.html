@@ -98,7 +98,11 @@
                       ovrl.style.opacity = 0;
                       setTimeout(function(){ 
                         ovrl.style.display = "none";
-                      }, 9000000);
+                        jQuery(function($) {
+                            $('#overlay').remove();
+                        });
+                      }, 2400);
+                      
                     }
                     for(var i=0; i<tot; i++) {
                       var tImg     = new Image();
@@ -121,7 +125,11 @@
             </div>
 
                 
-            
+            <script>
+                jQuery(function($) {
+                    $('#content').remove();
+                });
+            </script>
             <div id="fh5co-page">
 
                     <nav class="fh5co-nav-style-2" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
