@@ -10,7 +10,7 @@ and open the template in the editor.
 
 /* for page loader */
     *{margin:0;}
-    body{ font: 200 16px/1 sans-serif; }
+    body{ font: 200 16px/1.5 sans-serif; }
     img{ width:32.2%; }
 
     #overlay{
