@@ -1,622 +1,739 @@
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Lech Jankowski's Portfolio</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta name="description" content="Lech Jankowski's Portfolio" />
-            <meta name="keywords" content="Lech Jankowski, porfolio, software, web, design" />
-            <meta name="author" content="Lech Jankowski" />
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lech Jankowski's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lech Jankowski's Portfolio"/>
+    <meta name="keywords"
+          content="Lech Jankowski, porfolio, software, backend, frontend, application, web, design, ci/cd, data, NoSQL, SQL, graph"/>
+    <meta name="author" content="Lech Jankowski"/>
 
 
-            <!-- 
-            //////////////////////////////////////////////////////
+    <!--
+    //////////////////////////////////////////////////////
 
-            FREE HTML5 TEMPLATE 
-            DESIGNED & DEVELOPED by FREEHTML5.CO
+    FREE HTML5 TEMPLATE
+    DESIGNED & DEVELOPED by FREEHTML5.CO
 
-            Website: 		http://freehtml5.co/
-            Email: 			info@freehtml5.co
-            Twitter: 		http://twitter.com/fh5co
-            Facebook: 		https://www.facebook.com/fh5co
+    Website: 		http://freehtml5.co/
+    Email: 			info@freehtml5.co
+    Twitter: 		http://twitter.com/fh5co
+    Facebook: 		https://www.facebook.com/fh5co
 
-            //////////////////////////////////////////////////////
-            -->
+    //////////////////////////////////////////////////////
+    -->
 
-            <!-- Facebook and Twitter integration -->
-            <meta property="og:title" content=""/>
-            <meta property="og:image" content=""/>
-            <meta property="og:url" content=""/>
-            <meta property="og:site_name" content=""/>
-            <meta property="og:description" content=""/>
-            <meta name="twitter:title" content="" />
-            <meta name="twitter:image" content="" />
-            <meta name="twitter:url" content="" />
-            <meta name="twitter:card" content="" />
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content=""/>
+    <meta name="twitter:image" content=""/>
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:card" content=""/>
 
-            <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-            <link rel="shortcut icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
 
-            <!-- Google Fonts -->
-            <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Monsterrat:400,700|Merriweather:400,300italic,700'
+          rel='stylesheet' type='text/css'>
 
-            <!-- Animate.css -->
-            <link rel="stylesheet" href="css/animate.css">
-            <!-- Icomoon Icon Fonts-->
-            <link rel="stylesheet" href="css/icomoon.css">
-            <!-- Magnific Popup-->
-            <link rel="stylesheet" href="css/magnific-popup.css">
-            <!-- Owl Carousel -->
-            <link rel="stylesheet" href="css/owl.carousel.min.css">
-            <link rel="stylesheet" href="css/owl.theme.default.min.css">
-            <!-- Bootstrap  -->
-            <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Magnific Popup-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
 
-            <!-- Cards -->
-            <link rel="stylesheet" href="css/cards.css">
+    <!-- Cards -->
+    <link rel="stylesheet" href="css/cards.css">
 
-            <!-- Modernizr JS -->
-            <script src="js/modernizr-2.6.2.min.js"></script>
-            <!-- FOR IE9 below -->
-            <!--[if lt IE 9]>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 
-            <!-- page load -->
+    <!-- page load -->
 
-            
-            <!-- Mu custom style -->
-            <link rel="stylesheet" href="css/custom.css">
 
-            <!-- page loading script -->
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script>
-                ;(function(){
-                  function id(v){ return document.getElementById(v); }
-                  function loadbar() {
-                    var ovrl = id("overlay"),
-                        prog = id("progress"),
-                        stat = id("progstat"),
-                        img = document.images,
-                        c = 0,
-                        tot = img.length;
-                    if(tot == 0) return doneLoading();
+    <!-- Mu custom style -->
+    <link rel="stylesheet" href="css/custom.css">
 
-                    function imgLoaded(){
-                      c += 1;
-                      var perc = ((100/tot*c) << 0) +"%";
-                      prog.style.width = perc;
-                      stat.innerHTML = "Loading "+ perc;
-                      if(c===tot) return doneLoading();
-                    }
-                    function doneLoading(){
-                      ovrl.style.opacity = 0;
-                      setTimeout(function(){ 
-                        ovrl.style.display = "none";
-                        jQuery(function($) {
-                            $('#overlay').remove();
-                        });
-                      }, 1200);
-                      
-                    }
-                    for(var i=0; i<tot; i++) {
-                      var tImg     = new Image();
-                      tImg.onload  = imgLoaded;
-                      tImg.onerror = imgLoaded;
-                      tImg.src     = img[i].src;
-                    }    
-                  }
-                  document.addEventListener('DOMContentLoaded', loadbar, false);
-                }());
-            </script>
-       
-	</head>
-        
-	<body>
+    <!-- page loading script -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        ;(function(){
+          function id(v){ return document.getElementById(v); }
+          function loadbar() {
+            var ovrl = id("overlay"),
+                prog = id("progress"),
+                stat = id("progstat"),
+                img = document.images,
+                c = 0,
+                tot = img.length;
+            if(tot == 0) return doneLoading();
 
-            <div id="overlay">
-              <div id="progstat"></div>
-              <div id="progress"></div>
-            </div>
-
-                
-            <script>
+            function imgLoaded(){
+              c += 1;
+              var perc = ((100/tot*c) << 0) +"%";
+              prog.style.width = perc;
+              stat.innerHTML = "Loading "+ perc;
+              if(c===tot) return doneLoading();
+            }
+            function doneLoading(){
+              ovrl.style.opacity = 0;
+              setTimeout(function(){
+                ovrl.style.display = "none";
                 jQuery(function($) {
-                    $('#content').remove();
+                    $('#overlay').remove();
                 });
-            </script>
-            <div id="fh5co-page">
+              }, 1200);
 
-                    <nav class="fh5co-nav-style-2" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
-                            <div class="container">
-                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
-                                            <a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
-                                            <a href="index.html">Lech Jankowski's Portfolio</a>
-                                    </div>
-                                    <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
-                                            <ul data-offcanvass="yes">
-                                                    <li class="active"><a href="index.html">Software Development</a></li>
-                                                    <li><a href="http://www.behance.net/yankovskee">Creative Media</a></li>
-                                                    <li><a href="index.html#contact">Contact</a></li>
-                                            </ul>
-                                    </div> 
-                            </div>
-                    </nav>
+            }
+            for(var i=0; i<tot; i++) {
+              var tImg     = new Image();
+              tImg.onload  = imgLoaded;
+              tImg.onerror = imgLoaded;
+              tImg.src     = img[i].src;
+            }
+          }
+          document.addEventListener('DOMContentLoaded', loadbar, false);
+        }());
+    </script>
+
+</head>
+
+<body>
+
+<div id="overlay">
+    <div id="progstat"></div>
+    <div id="progress"></div>
+</div>
 
 
-                    <div class="fh5co-cover fh5co-cover-style- js-full-height" data-stellar-background-ratio="1" data-next="yes"  style="background-image: url(images/LechLeft2Abstract.jpg); background-repeat: no-repeat; background-size: contain; background-color: #000">
+<script>
+    jQuery(function($) {
+        $('#content').remove();
+    });
+</script>
+<div id="fh5co-page">
+
+    <nav class="fh5co-nav-style-2" role="navigation" data-offcanvass-position="fh5co-offcanvass-left">
+        <div class="container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 fh5co-logo">
+                <a href="#" class="js-fh5co-mobile-toggle fh5co-nav-toggle"><i></i></a>
+                <a href="index.html">Lech Jankowski's Portfolio</a>
+            </div>
+            <div class="col-lg-6 col-md-5 col-sm-5 text-center fh5co-link-wrap">
+                <ul data-offcanvass="yes">
+                    <li class="active"><a href="index.html">Software Development</a></li>
+                    <li><a href="http://www.behance.net/yankovskee">Creative Media</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="fh5co-cover fh5co-cover-style- js-full-height" data-stellar-background-ratio="1" data-next="yes"
+         style="background-image: url(images/LechLeft2Abstract.jpg); background-repeat: no-repeat; background-size: contain; background-color: #000">
 		  	<span class="scroll-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
 				<a href="#">
 					<span class="mouse"><span></span></span>
 				</a>
 			</span>
-                            <div class="fh5co-overlay"></div>
-                            <div class="fh5co-cover-text">
-                                    <div class="container">
-                                            <div class="row">
-                                                    <div class="col-md-push-6 col-md-6 full-height js-full-height">
-                                                            <div class="fh5co-cover-intro">
-                                                                    <h1 class="cover-text-lead wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s" style="color: #c1e2b3">IT Creations made with a smile</h1>
-                                                                    <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".6s">ICT Creations made with smile and thorough touch. I work on my projects with determination, curiosity and with passion for design.</br></br>Over 20 years experience in ICT management and software development. Programming in JAVA, Python, VB, Kotlin, JSF, JSP, PHP, .NET, Javascript,  HTML, CSS .. </h2>
-                                                                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".9s"><a href="http://ie.linkedin.com/in/lechjankowski" class="btn btn-primary btn-outline btn-lg">See My Profile - <i class="icon icon-linkedin"></i></a></p>
-                                                            </div>
-                                                    </div>
-                                            </div>
-                                    </div>	
-                            </div>
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-cover-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-push-6 col-md-6 full-height js-full-height">
+                        <div class="fh5co-cover-intro">
+                            <h1 class="cover-text-lead wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".3s"
+                                style="color: #c1e2b3">IT Creations made with a smile</h1>
+                            <h2 class="cover-text-sublead wow fadeInUp" data-wow-duration=".7s" data-wow-delay=".6s">
+                                ICT Creations made with smile and thorough touch. I work on my projects with determination,
+                                curiosity and with passion for design.
+                                </br></br>Over 20 years experience in ICT management and software development.
+                                </br></br>Programming in JAVA, Python, VB, Kotlin, JSF, JSP, PHP, .NET, Javascript, HTML, CSS .. </h2>
+                            <p class="wow fadeInUp" data-wow-duration="1s"
+                               data-wow-delay=".9s"><a
+                                    href="http://ie.linkedin.com/in/lechjankowski" class="btn btn-primary btn-lg">See my
+                                profile on <i class="icon icon-linkedin"></i></a></p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-
-                    <div class="fh5co-project-style-2">
-                            <div class="container">
-                                    <div class="row p-b">
-                                            <div class="col-md-6 col-md-offset-3 text-center">
-                                                    <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s">My Projects</h2>
-                                                    <p class="wow fadeInUp" data-wow-duration=".2s"
-                                                       data-wow-delay=".4s">Below is a showcase sample of my
-                                                        old software development projects. Each of them has a link to
-                                                        BitBucket code repository and some have links to live demo.</p>
-                                            </div>
-                                    </div>
-                            </div>
-                            <div id="projects" class="fh5co-projects">
-                                    <ul>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
-                                                    <a href="proj_padole.html">
-                                                            <div class="fh5co-overlay"></div>
-                                                            <div class="container">
-                                                                    <div class="fh5co-text">
-                                                                            <div class="fh5co-text-inner">
-                                                                                    <div class="row">
-                                                                                            <div class="col-md-3"><h3
-                                                                                                    style="padding-top: 1em; padding-bottom: 1em;">2014 - Padole Book Store Web App</h3></div>
-                                                                                            <div class="col-md-3">
-                                                                                                <img class="img-rounded" src="screenshots/padole4a.jpg" alt="Screenshot" style="width:100%">
-                                                                                            </div>         
-                                                                                            <div class="col-md-6"><p style="padding-top: 1em;" >JAVA Web application based on JSP, HTML, CSS, Javascript, Servlet, MySQL.
-                                                                                                Full Stack Development.</p></div>
-                                                                                    </div>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </a>
-                                            </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
-                                                    <a href="proj_landmark.html">
-                                                            <div class="fh5co-overlay"></div>
-                                                            <div class="container">
-                                                                    <div class="fh5co-text">
-                                                                            <div class="fh5co-text-inner">
-                                                                                    <div class="row">
-                                                                                            <div class="col-md-3"><h3
-                                                                                                    style="padding-top: 1em; padding-bottom: 1em;">2015 - Landmark Explorer Web App</h3></div>
-                                                                                            <div class="col-md-3">
-                                                                                                <img class="img-rounded" src="screenshots/landmark4.jpg" alt="Screenshot" style="width:100%">
-                                                                                            </div>   
-                                                                                            <div class="col-md-6"><p style="padding-top: 1em;" >JAVA Web Application (responsive) using JAVA, JSP, Servlet, MySQL, noSQL Neo4j, HTML, CSS, Javascript, Bootstrap.js. Full Stack Development with emphasis on Back End.</p></div>
-                                                                                    </div>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </a>
-                                            </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
-                                                    <a href="proj_spsoc.html">
-                                                            <div class="fh5co-overlay"></div>
-                                                            <div class="container">
-                                                                    <div class="fh5co-text">
-                                                                            <div class="fh5co-text-inner">
-                                                                                    <div class="row">
-                                                                                            <div class="col-md-3"><h3
-                                                                                                    style="padding-top: 1em; padding-bottom: 1em;">2014 - Sports & Societies Web App</h3></div>
-                                                                                            <div class="col-md-3">
-                                                                                                <img class="img-rounded" src="screenshots/spsoc1hd.jpg" alt="Screenshot" style="width:100%;">
-                                                                                            </div>                                                                                          
-                                                                                            <div class="col-md-6"><p style="padding-top: 1em;" >Mobile enabled (responsive) web application using PHP, HTML, CSS, Javascript, Bootstrap.js. Full Stack Development.</p></div>
-                                                                                    </div>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </a>
-                                            </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
-                                                    <a href="proj_daft.html">
-                                                            <div class="fh5co-overlay"></div>
-                                                            <div class="container">
-                                                                    <div class="fh5co-text">
-                                                                            <div class="fh5co-text-inner">
-                                                                                    <div class="row">
-                                                                                            <div class="col-md-3"><h3
-                                                                                                    style="padding-top: 1em; padding-bottom: 1em;">2016 - DAFT.ie APIs Test</h3></div>
-                                                                                            <div class="col-md-3">
-                                                                                                <img class="img-rounded" src="screenshots/daft1.jpg" alt="Screenshot" style="width:100%;">
-                                                                                            </div>                                                                                          
-                                                                                            <div class="col-md-6"><p style="padding-top: 1em;" >Technical Test for DAFT.ie using DAFT APIs in PHP, HTML and Bootstrap.js</p></div>
-                                                                                    </div>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </a>
-                                            </li>
-                                            <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s" data-wow-delay=".4s" data-stellar-background-ratio="0.5">
-                                                    <a href="proj_rebelvote.html">
-                                                            <div class="fh5co-overlay"></div>
-                                                            <div class="container">
-                                                                    <div class="fh5co-text">
-                                                                            <div class="fh5co-text-inner">
-                                                                                    <div class="row">
-                                                                                            <div class="col-md-3"><h3
-                                                                                                    style="padding-top: 1em; padding-bottom: 1em;">2014 - RebelVote JavaFX application</h3></div>
-                                                                                            <div class="col-md-3">
-                                                                                                <img class="img-rounded" src="screenshots/rebelvote1.jpg" alt="Screenshot" style="width:100%;">
-                                                                                            </div>                                                                                          
-                                                                                            <div class="col-md-6"><p style="padding-top: 1em;" >JavaFX standalone application demonstrating use of data structures like hashtable and double link list (not generic).</p></div>
-                                                                                    </div>
-                                                                            </div>
-                                                                    </div>
-                                                            </div>
-                                                    </a>
-                                            </li>
-                                    </ul>
-                            </div>
-                            <div class="container">
-                                <div class="clearfix visible-sm-block"></div>
-                                <div class="row p-b"></div>                       
-                                <div class="row p-b">
-                                        <div class="col-md-6 col-md-offset-3 text-center">
-                                                <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a>
+    <div class="fh5co-project-style-2"
+         style="background-image: url(images/lightbg.jpg); background-size: contain; opacity: 0.7; filter: alpha(opacity=70);">
+        <div class="container">
+            <div class="row p-b">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s">My Projects</h2>
+                    <p class="wow fadeInUp" data-wow-duration=".2s"
+                       data-wow-delay=".4s">
+                        Hereby I showcase only samples of my old software development
+                        projects which I have enjoyed the most and which I am allowed to share.
+                        <br/><br/>
+                        Each of them has a link to code repository and some have
+                        links to a live demo.</p>
+                </div>
+            </div>
+        </div>
+        <div id="projects" class="fh5co-projects">
+            <ul>
+                <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s"
+                    data-wow-delay=".4s" data-stellar-background-ratio="0.5">
+                    <a href="proj_daft.html">
+                        <div class="fh5co-overlay"></div>
+                        <div class="container">
+                            <div class="fh5co-text">
+                                <div class="fh5co-text-inner">
+                                    <div class="row">
+                                        <div class="col-md-3"><h3
+                                                style="padding-top: 1em; padding-bottom: 1em;">2016 - DAFT.ie APIs
+                                            Test</h3></div>
+                                        <div class="col-md-3">
+                                            <img class="img-rounded" src="screenshots/daft1.jpg" alt="Screenshot"
+                                                 style="width:100%;">
                                         </div>
+                                        <div class="col-md-6"><p style="padding-top: 1em;">Technical Test for DAFT.ie
+                                            using DAFT APIs in PHP, HTML and Bootstrap.js</p></div>
+                                    </div>
                                 </div>
-                            </div>                    
-                    </div>
-
-
-                    <div class="fh5co-features-style-2" style="background-image: url(images/lightbg.jpg); background-size: contain; opacity: 0.7; filter: alpha(opacity=70);" data-stellar-background-ratio="0.5">
-                            <div class="container">
-                                    <div class="row p-b">
-                                            <div class="col-md-6 col-md-offset-3 text-center">
-                                                    <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s">Why Me?</h2>
-                                                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" style="color: darkslategray;"></p>
-                                            </div>
-                                    </div>
-                                    <div class="row">
-                                        <!-- oryginal <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">-->
-                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                            <div class="fh5co-icon"><i class="glyphicon glyphicon-pencil"></i></div>
-                                            <div class="fh5co-desc" style="color: darkslategray;">
-                                                <h3>Creativity</h3>
-                                                <p>Since my early days I've always loved design and all aspects of development in these areas.</p>
-                                            </div>	
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                            <div class="fh5co-icon"><i class="icon-eye22"></i></div>
-                                            <div class="fh5co-desc" style="color: darkslategray;">
-                                                <h3>Perfection</h3>
-                                                <p>I trive to achieve ideal results with attention to detail. My goal is to deliver good quality.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class ="row">                                        
-                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                            <div class="fh5co-icon"><i class="glyphicon glyphicon-road"></i></div>
-                                            <div class="fh5co-desc" style="color: darkslategray;">
-                                                <h3>Determination</h3>
-                                                <p>I solve problems researching all options and solutions.</p>
-                                            </div>
-                                        </div>      
-                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
-                                            <div class="fh5co-icon"><i class="glyphicon glyphicon-user"></i></div>
-                                            <div class="fh5co-desc" style="color: darkslategray;">
-                                                <h3>Collaboration</h3>
-                                                <p>I work well within a team environment and with stakeholders.</p>
-                                            </div>	
-                                        </div>
-                                    </div>
-                                    <div class ="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
-                                            <div class="fh5co-icon"><i class="icon-cogs"></i></div>
-                                            <div class="fh5co-desc" style="color: darkslategray;">
-                                                <h3>Challenges</h3>
-                                                <p>I enjoy working around these when I'm being inspired with new creations.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
-                                            <div class="fh5co-icon"><i class="glyphicon glyphicon-tower"></i></div>
-                                            <div class="fh5co-desc" style="color: darkslategray;">
-                                                <h3>Reliability</h3>
-                                                <p>Proven reliability!</p>
-                                            </div>
-                                        </div>
-                                        <!--<div class="clearfix visible-sm-block visible-xs-block"></div>-->
-                                    </div>
-                                    <div class="clearfix visible-sm-block"></div>
-                                    <div class="row p-b"></div>                       
-                                    <div class="row p-b">
-                                            <div class="col-md-6 col-md-offset-3 text-center">
-                                                    <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a>
-                                            </div>
-                                    </div>
                             </div>
-                    </div>
+                        </div>
+                    </a>
+                </li>
 
-                    <div class="fh5co-testimonial-style-2"  style="background-image: url(images/darkbg.jpg);" data-stellar-background-ratio="0.5">
-                            <div class="container">
-                                    <div class="row p-b">
-                                            <div class="col-md-6 col-md-offset-3 text-center">
-                                                <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s" style="color: #ffffff">Testimonials</h2>
-                                                    <p class="wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s"></p>
-                                            </div>
-                                    </div>
+                <li class="wow fadeInUp" style="background-image: url(images/full_2.jpg);" data-wow-duration=".5s"
+                    data-wow-delay=".4s" data-stellar-background-ratio="0.5">
+                    <a href="proj_landmark.html">
+                        <div class="fh5co-overlay"></div>
+                        <div class="container">
+                            <div class="fh5co-text">
+                                <div class="fh5co-text-inner">
                                     <div class="row">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/michaelvale.jpeg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>Michael Vale</h3>
-                                                        <span class="fh5co-company">ETU</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech was a member of the Product Development team in
-                                                        ETU when I was CEO. Whilst I had no direct involvement with
-                                                        Lech. It was obvious Lech was a team player and fitted in very well. Lech also brought an innovative mind to the team and regularly made valuable innovative suggestions. I feel Lech will be a valuable asset where ever he goes. Michael.&rdquo;</p>
-                                                </div>
-                                            </div>
+                                        <div class="col-md-3"><h3
+                                                style="padding-top: 1em; padding-bottom: 1em;">2015 - Landmark Explorer
+                                            Web App</h3></div>
+                                        <div class="col-md-3">
+                                            <img class="img-rounded" src="screenshots/landmark4.jpg" alt="Screenshot"
+                                                 style="width:100%">
                                         </div>
+                                        <div class="col-md-6"><p style="padding-top: 1em;">JAVA Web Application
+                                            (responsive) using JAVA, JSP, Servlet, MySQL, noSQL Neo4j, HTML, CSS,
+                                            Javascript, Bootstrap.js. Full Stack Development with emphasis on Back
+                                            End.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
 
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/alexkeane.jpeg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>Alex Keane</h3>
-                                                        <span class="fh5co-company">Armac Systems - former COO</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech is a member of the Product Development team in Armac within the Operations Division managed by me. He has experience of the full development stack: Java, Spring, Hibernate, Jsf, Primefaces, Javascript, Gradle, ETL Pentaho data intergation, AWS etc. He is always exploring new release features and keeping up with the latest developments across he stack. He is willing to put in that extra effort when required and takes great pride in his work. He is a team player and is always eager to learn new tools and techniques.&rdquo;</p>
-                                                </div>
-                                            </div>
+                <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s"
+                    data-wow-delay=".4s" data-stellar-background-ratio="0.5">
+                    <a href="proj_padole.html">
+                        <div class="fh5co-overlay"></div>
+                        <div class="container">
+                            <div class="fh5co-text">
+                                <div class="fh5co-text-inner">
+                                    <div class="row">
+                                        <div class="col-md-3"><h3
+                                                style="padding-top: 1em; padding-bottom: 1em;">2014 - Padole Book Store
+                                            Web App</h3></div>
+                                        <div class="col-md-3">
+                                            <img class="img-rounded" src="screenshots/padole4a.jpg" alt="Screenshot"
+                                                 style="width:100%">
                                         </div>
+                                        <div class="col-md-6"><p style="padding-top: 1em;">JAVA Web application based on
+                                            JSP, HTML, CSS, Javascript, Servlet, MySQL.
+                                            Full Stack Development.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
 
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/noeleenkennedy.jpeg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>Noeleen Kennedy</h3>
-                                                        <span class="fh5co-company">Armac Systems - former Senior
+                <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s"
+                    data-wow-delay=".4s" data-stellar-background-ratio="0.5">
+                    <a href="proj_spsoc.html">
+                        <div class="fh5co-overlay"></div>
+                        <div class="container">
+                            <div class="fh5co-text">
+                                <div class="fh5co-text-inner">
+                                    <div class="row">
+                                        <div class="col-md-3"><h3
+                                                style="padding-top: 1em; padding-bottom: 1em;">2014 - Sports & Societies
+                                            Web App</h3></div>
+                                        <div class="col-md-3">
+                                            <img class="img-rounded" src="screenshots/spsoc1hd.jpg" alt="Screenshot"
+                                                 style="width:100%;">
+                                        </div>
+                                        <div class="col-md-6"><p style="padding-top: 1em;">Mobile enabled (responsive)
+                                            web application using PHP, HTML, CSS, Javascript, Bootstrap.js. Full Stack
+                                            Development.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="wow fadeInUp" style="background-image: url(images/full_1.jpg);" data-wow-duration=".5s"
+                    data-wow-delay=".4s" data-stellar-background-ratio="0.5">
+                    <a href="proj_rebelvote.html">
+                        <div class="fh5co-overlay"></div>
+                        <div class="container">
+                            <div class="fh5co-text">
+                                <div class="fh5co-text-inner">
+                                    <div class="row">
+                                        <div class="col-md-3"><h3
+                                                style="padding-top: 1em; padding-bottom: 1em;">2014 - RebelVote JavaFX
+                                            application</h3></div>
+                                        <div class="col-md-3">
+                                            <img class="img-rounded" src="screenshots/rebelvote1.jpg" alt="Screenshot"
+                                                 style="width:100%;">
+                                        </div>
+                                        <div class="col-md-6"><p style="padding-top: 1em;">JavaFX standalone application
+                                            demonstrating use of data structures like hashtable and double link list
+                                            (not generic).</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="clearfix visible-sm-block"></div>
+            <div class="row p-b"></div>
+            <div class="row p-b">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fh5co-features-style-2"
+         style="background-image: url(images/lightbg.jpg); background-size: contain; opacity: 0.7; filter: alpha(opacity=70);"
+         data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row p-b">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s">Why Me?</h2>
+                    <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s"
+                       style="color: darkslategray;"></p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- oryginal <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">-->
+                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s"
+                     data-wow-delay=".4s">
+                    <div class="fh5co-icon"><i class="glyphicon glyphicon-pencil"></i></div>
+                    <div class="fh5co-desc" style="color: darkslategray;">
+                        <h3>Creativity</h3>
+                        <p>Since my early days I've always loved design and all aspects of development in these
+                            areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s"
+                     data-wow-delay=".4s">
+                    <div class="fh5co-icon"><i class="icon-eye22"></i></div>
+                    <div class="fh5co-desc" style="color: darkslategray;">
+                        <h3>Perfection</h3>
+                        <p>I trive to achieve ideal results with attention to detail. My goal is to deliver good
+                            quality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s"
+                     data-wow-delay=".4s">
+                    <div class="fh5co-icon"><i class="glyphicon glyphicon-road"></i></div>
+                    <div class="fh5co-desc" style="color: darkslategray;">
+                        <h3>Determination</h3>
+                        <p>I solve problems researching all options and solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s"
+                     data-wow-delay=".6s">
+                    <div class="fh5co-icon"><i class="glyphicon glyphicon-user"></i></div>
+                    <div class="fh5co-desc" style="color: darkslategray;">
+                        <h3>Collaboration</h3>
+                        <p>I work well within a team environment and with stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s"
+                     data-wow-delay=".6s">
+                    <div class="fh5co-icon"><i class="icon-cogs"></i></div>
+                    <div class="fh5co-desc" style="color: darkslategray;">
+                        <h3>Challenges</h3>
+                        <p>I enjoy working around these when I'm being inspired with new creations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 fh5co-feature wow fadeInUp" data-wow-duration=".2s"
+                     data-wow-delay=".6s">
+                    <div class="fh5co-icon"><i class="glyphicon glyphicon-tower"></i></div>
+                    <div class="fh5co-desc" style="color: darkslategray;">
+                        <h3>Reliability</h3>
+                        <p>Proven reliability!</p>
+                    </div>
+                </div>
+                <!--<div class="clearfix visible-sm-block visible-xs-block"></div>-->
+            </div>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="row p-b"></div>
+            <div class="row p-b">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fh5co-testimonial-style-2" style="background-image: url(images/darkbg.jpg);"
+         data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row p-b">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h2 class="fh5co-heading wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".2s"
+                        style="color: #ffffff">Testimonials</h2>
+                    <p class="wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s"></p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
+                        <div class="fh5co-name">
+                            <img src="people/michaelvale.jpeg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Michael Vale</h3>
+                                <span class="fh5co-company">ETU</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech was a member of the Product Development team in
+                                ETU when I was CEO. Whilst I had no direct involvement with
+                                Lech. It was obvious Lech was a team player and fitted in very well. Lech also brought
+                                an innovative mind to the team and regularly made valuable innovative suggestions. I
+                                feel Lech will be a valuable asset where ever he goes. Michael.&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
+                        <div class="fh5co-name">
+                            <img src="people/alexkeane.jpeg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Alex Keane</h3>
+                                <span class="fh5co-company">Armac Systems - former COO</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech is a member of the Product Development team in Armac within the Operations
+                                Division managed by me. He has experience of the full development stack: Java, Spring,
+                                Hibernate, Jsf, Primefaces, Javascript, Gradle, ETL Pentaho data intergation, AWS etc.
+                                He is always exploring new release features and keeping up with the latest developments
+                                across he stack. He is willing to put in that extra effort when required and takes great
+                                pride in his work. He is a team player and is always eager to learn new tools and
+                                techniques.&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
+                        <div class="fh5co-name">
+                            <img src="people/noeleenkennedy.jpeg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Noeleen Kennedy</h3>
+                                <span class="fh5co-company">Armac Systems - former Senior
                                                             Developer, currently Senior Software Engineering Manager
                                                             at Microsoft</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech is a knowledgeable full stack developer and reliable team player. When required put in extra personal time to meet customer project deadlines. He's obliging, approachable and very pleasant individual.&rdquo;</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="clearfix visible-lg-block visible-md-block"></div>
-
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/davidmcquaid.jpg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>David McQuaid</h3>
-                                                        <span class="fh5co-company">Dundalk Institute of Technology + 4GSmart.</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech is one of the most conscientious programmers I have ever seen. His code is tested to the utmost degree and his problem solving skills are excellent...&rdquo;</p>
-                                                </div>
-                                            </div>	
-                                        </div>
-
-                                        <div class="clearfix visible-sm-block"></div>
-
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".5s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/amandakirk.jpg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>Amanda Kirk</h3>
-                                                        <span class="fh5co-company">Enterprise Ireland - where innovation means business</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;As Chairman of the ACM Chapter at DkIT Lech co-presented a workshop to mature learners with me on the topic of "how to use social media as a job hunting tool". I would highly recommend Lech. He is a dynamic, creative and inspiring individual with a high energy drive...&rdquo;</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="clearfix visible-sm-block"></div>
-
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/malachyo'leary.jpg" alt=""></br>
-                                                        <div class="fh5co-meta">
-                                                            <h3 style='color: white'>Malachy O'Leary</h3>
-                                                            <span class="fh5co-company">Daon</span>
-                                                        </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech and I were students together in the DKIT. He is a very honest and hard working individual with a great talent for computer programming and associated subjects. I would recommend Lech to any employer and I know he would never let you down...&rdquo;</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="clearfix visible-lg-block visible-md-block"></div>
-
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".7s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/leszekguzowski.jpg" alt=""></br>
-                                                        <div class="fh5co-meta">
-                                                            <h3 style='color: white'>Leszek Guzowski</h3>
-                                                            <span class="fh5co-company">GiP Warsaw</span>
-                                                        </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech Jankowski has worked with our company for several years in the implementation and maintenance of systems for hotels and gastronomy. He was known as a competent and reliable IT professional, communicative and liked by the customers...&rdquo;</p>
-                                                </div>
-                                            </div>	
-                                        </div>
-
-                                        <div class="clearfix visible-sm-block"></div>
-
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".8s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/jerzyrydzewski.jpg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>Jerzy Rydzewski</h3>
-                                                        <span class="fh5co-company">PROFILE Human Resources Consulting</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Lech Jankowski know for many years. His position in the company organizational structure - directly reporting to Director. His scope of duties in the position was - administration of servers and network software thereon, administration of PCs (operational stations), their systems and software , network administration. Lech is an energetic and communicative person and makes interpersonal relations with ease. He is conscientious, involved in his work and helpful. He performs his tasks in a systematic and at the same time precise way...&rdquo;</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="clearfix visible-sm-block"></div>
-                                        
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".9s">
-                                                <div class="fh5co-name">
-                                                    <img src="people/gavinbyrne.jpg" alt=""></br>
-                                                    <div class="fh5co-meta">
-                                                        <h3 style='color: white'>Gavin Byrne</h3>
-                                                        <span class="fh5co-company">Frametastic</span>
-                                                    </div>
-                                                </div>
-                                                <div class="fh5co-text">
-                                                    <p>&ldquo;Excellent product development and attention to detail, can work to a deadline and deliver..&rdquo;</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-
-                                <div class="clearfix visible-sm-block"></div>
-
-                                <div class="row">
-                                    <div class="col-md-6 col-md-offset-3 text-center">
-                                            <a href="http://ie.linkedin.com/in/lechjankowski" class="btn btn-primary btn-lg">Read more... <i class="icon icon-linkedin"></i></a>
-                                    </div>
-                                </div>
-
-                                <div class="row p-b"></div>  
-                                <div class="row">
-                                    <div class="col-md-6 col-md-offset-3 text-center">
-                                            <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a>
-                                    </div>
-                                </div>
-                            </div>	
-                    </div>
-
-                    <div id="contact" class="fh5co-footer-style-3">
-                            <div class="container">
-                                    <div class="row p-b">
-                                            <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".2s">
-                                                    <div class="fh5co-logo"><span class="logo">LJ</span> Lech Jankowski</div>
-                                                    <p class="fh5co-copyright">&copy; 2017 Lech Jankowski. <br>All Rights Reserved.<br>Used framework by FREEHTML5.co<br> 
-                                            </div>
-                                        <!--
-                                            <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".8s">
-                                                    <h3>Company</h3>
-                                                    <ul class="fh5co-links">
-                                                            <li><a href="#">Contact</a></li>
-                                                    </ul>
-                                            </div>
-                                        -->
-                                            <div class="clearfix visible-sm-block"></div>
-                                            <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".4s">
-                                                    <h3>Connect</h3>
-                                                    <ul class="fh5co-links fh5co-social">
-                                                            <li><a href="http://ie.linkedin.com/in/lechjankowski"><i class="icon icon-linkedin"></i> Linkedin</a></li>
-                                                    </ul>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".6s">
-                                                    <h3>About</h3>
-                                                    <p>ICT Creations made with smile and thorough touch. I work on my projects with determination, curiosity and with passion for design.</br></br>Over 20 years experience in ICT management and software development. Programming in JAVA, Python, VB, Kotlin, JSF, JSP, PHP, .NET, Javascript,  HTML, CSS .. </p>
-
-                                            </div>
-                                              
-                                            <div class="row p-b">
-                                                    <div class="col-md-6 col-md-offset-3 text-center">
-                                                            <p class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s"><a href="#" class="btn btn-primary btn-outline btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a></p>                                        
-                                                    </div>
-                                            </div>                            
-
-                                    </div>
-                                    <div class="row fh5co-made">
-                                            <div class="col-md-12 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s">
-                                                    <p>Made by Lech</p>
-                                            </div>
-                                    </div>
-
                             </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech is a knowledgeable full stack developer and reliable team player. When
+                                required put in extra personal time to meet customer project deadlines. He's obliging,
+                                approachable and very pleasant individual.&rdquo;</p>
+                        </div>
                     </div>
-                    <!-- END footer -->
+                </div>
+
+                <div class="clearfix visible-lg-block visible-md-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
+                        <div class="fh5co-name">
+                            <img src="people/johnmatthews.jpeg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>John Matthews</h3>
+                                <span class="fh5co-company">former Armac Systems Analyst, current Senior Business</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;I had the opportunity to work with Lech on a number of key projects within Armac and found him to be very professional and customer oriented. No task was too much or no question too silly. Lech took the time to explain things to me and to teach me at every opportunity which was very much appreciated.
+                                Despite his role being predominantly development focused, Lech found himself being the point of contact with clients due to the nature of their queries and excelled in this role. His attention to detail and desire to ensure all queries were handled fully and satisfactorily led to clients contacting him directly which was a great testament to his work ethic and his relationship with clients.
+                                I have no hesitation in recommending Lech. He would be a valuable asset to any organisation and is one of those rare breed of developers who can straddle the technical and business sides of a project."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".4s">
+                        <div class="fh5co-name">
+                            <img src="people/davidmcquaid.jpg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>David McQuaid</h3>
+                                <span class="fh5co-company">Dundalk Institute of Technology + 4GSmart.</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech is one of the most conscientious programmers I have ever seen. His code is
+                                tested to the utmost degree and his problem solving skills are excellent...&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".5s">
+                        <div class="fh5co-name">
+                            <img src="people/amandakirk.jpg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Amanda Kirk</h3>
+                                <span class="fh5co-company">Enterprise Ireland - where innovation means business</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;As Chairman of the ACM Chapter at DkIT Lech co-presented a workshop to mature
+                                learners with me on the topic of "how to use social media as a job hunting tool". I
+                                would highly recommend Lech. He is a dynamic, creative and inspiring individual with a
+                                high energy drive...&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-lg-block visible-md-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".6s">
+                        <div class="fh5co-name">
+                            <img src="people/malachyo'leary.jpg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Malachy O'Leary</h3>
+                                <span class="fh5co-company">Daon</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech and I were students together in the DKIT. He is a very honest and hard
+                                working individual with a great talent for computer programming and associated subjects.
+                                I would recommend Lech to any employer and I know he would never let you
+                                down...&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".7s">
+                        <div class="fh5co-name">
+                            <img src="people/leszekguzowski.jpg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Leszek Guzowski</h3>
+                                <span class="fh5co-company">GiP Warsaw</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech Jankowski has worked with our company for several years in the implementation
+                                and maintenance of systems for hotels and gastronomy. He was known as a competent and
+                                reliable IT professional, communicative and liked by the customers...&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-sm-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".8s">
+                        <div class="fh5co-name">
+                            <img src="people/jerzyrydzewski.jpg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Jerzy Rydzewski</h3>
+                                <span class="fh5co-company">PROFILE Human Resources Consulting</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Lech Jankowski know for many years. His position in the company organizational
+                                structure - directly reporting to Director. His scope of duties in the position was -
+                                administration of servers and network software thereon, administration of PCs
+                                (operational stations), their systems and software , network administration. Lech is an
+                                energetic and communicative person and makes interpersonal relations with ease. He is
+                                conscientious, involved in his work and helpful. He performs his tasks in a systematic
+                                and at the same time precise way...&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix visible-lg-block visible-md-block"></div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="fh5co-testimonial-item wow fadeInUp" data-wow-duration=".2s" data-wow-delay=".9s">
+                        <div class="fh5co-name">
+                            <img src="people/gavinbyrne.jpg" alt=""></br>
+                            <div class="fh5co-meta">
+                                <h3 style='color: white'>Gavin Byrne</h3>
+                                <span class="fh5co-company">Frametastic</span>
+                            </div>
+                        </div>
+                        <div class="fh5co-text">
+                            <p>&ldquo;Excellent product development and attention to detail, can work to a deadline and
+                                deliver..&rdquo;</p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <!-- END page-->
 
-            <!-- jQuery -->
-            <script src="js/jquery.min.js"></script>
-            <!-- jQuery Easing -->
-            <script src="js/jquery.easing.1.3.js"></script>
-            <!-- Bootstrap -->
-            <script src="js/bootstrap.min.js"></script>
-            <!-- Waypoints -->
-            <script src="js/jquery.waypoints.min.js"></script>
-            <!-- Owl Carousel -->
-            <script src="js/owl.carousel.min.js"></script>
-            <!-- Magnific Popup -->
-            <script src="js/jquery.magnific-popup.min.js"></script>
-            <!-- Stellar -->
-            <script src="js/jquery.stellar.min.js"></script>
-            <!-- countTo -->
-            <script src="js/jquery.countTo.js"></script>
-            <!-- WOW -->
-            <script src="js/wow.min.js"></script>
-            <script>
-                    new WOW().init();
-            </script>
-            <!-- Main -->
-            <script src="js/main.js"></script>
+            <div class="clearfix visible-sm-block"></div>
+            <div class="clearfix visible-lg-block visible-md-block"></div>
 
-	</body>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="http://ie.linkedin.com/in/lechjankowski" class="btn btn-primary btn-lg">Read more... <i
+                            class="icon icon-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="row p-b"></div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <a href="#" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="fh5co-footer-style-3">
+        <div class="container">
+            <div class="row p-b">
+                <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s"
+                     data-wow-delay=".2s">
+                    <div class="fh5co-logo"><span class="logo">LJ</span> Lech Jankowski</div>
+                    <p class="fh5co-copyright">&copy; 2017 Lech Jankowski. <br>All Rights Reserved.<br>Used framework by
+                        FREEHTML5.co<br>
+                </div>
+                <!--
+                    <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".8s">
+                            <h3>Company</h3>
+                            <ul class="fh5co-links">
+                                    <li><a href="#">Contact</a></li>
+                            </ul>
+                    </div>
+                -->
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s"
+                     data-wow-delay=".4s">
+                    <h3>Connect</h3>
+                    <ul class="fh5co-links fh5co-social">
+                        <li><a href="http://ie.linkedin.com/in/lechjankowski"><i class="icon icon-linkedin"></i>
+                            Linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration=".5s"
+                     data-wow-delay=".6s">
+                    <h3>About</h3>
+                    <p>ICT Creations made with smile and thorough touch. I work on my projects with determination,
+                        curiosity and with passion for design.</br></br>Over 20 years experience in ICT management and
+                        software development. Programming in JAVA, Python, VB, Kotlin, JSF, JSP, PHP, .NET, Javascript,
+                        HTML, CSS .. </p>
+
+                </div>
+
+                <div class="row p-b">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <p class="wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s">
+                            <a href="#" class="btn btn-primary btn-outline btn-lg"><i class="glyphicon glyphicon-menu-up"></i></a></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row fh5co-made">
+                <div class="col-md-12 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s">
+                    <p>Made by Lech</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END footer -->
+
+</div>
+<!-- END page-->
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Owl Carousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Magnific Popup -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Stellar -->
+<script src="js/jquery.stellar.min.js"></script>
+<!-- countTo -->
+<script src="js/jquery.countTo.js"></script>
+<!-- WOW -->
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+<!-- Main -->
+<script src="js/main.js"></script>
+
+</body>
 </html>
